@@ -1,0 +1,17 @@
+<!--
+ - Created by zb185019 on 7/18/2018.
+ -->
+
+<apex:page id="CSVReaderTest" controller="CSVTestController">
+    <table border="1" cellpadding="3" cellspacing="0">
+        <tr>
+            <apex:repeat value="{!reader.columnList}" var="col0"><td>{!col0}</td></apex:repeat>
+        </tr>
+        <apex:repeat value="{!reader.csvArray}" var="row">
+            <tr>
+                <apex:repeat value="{!row}" var="col"><td>{!col}</td></apex:repeat>
+            </tr>
+        </apex:repeat>
+    </table>
+    Test {!CSVLength}
+</apex:page>

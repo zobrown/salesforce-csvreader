@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>CSVReader</members>
+        <members>CSVReader_Test</members>
+        <members>CSVTestController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>CSVReaderTest</members>
+        <name>ApexPage</name>
+    </types>
+    <version>40.0</version>
+</Package>
