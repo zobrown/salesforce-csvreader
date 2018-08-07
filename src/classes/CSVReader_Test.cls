@@ -40,5 +40,16 @@ public class CSVReader_Test {
 
     }
 
+    static testMethod  void testZeroWidthValues() {
+      String inputString = 'Id,Name,Description,Other\n' +
+                           '123,,"I like Freder\nick",""\n';
+      CSVReader internalReader = new CSVReader(inputString, true);
+      System.assertEquals('123', internalReader.listOfMaps[0].get('Id'));
+      System.assertEquals('', internalReader.listOfMaps[0].get('Name'));
+      System.assertEquals('I like Freder\nick', internalReader.listOfMaps[0].get('Description'));
+      System.assertEquals('', internalReader.listOfMaps[0].get('Other'));
+      
+    }
+
 
 }

@@ -127,7 +127,7 @@ public class CSVReader {
         terminatorSet.add(NL);
         terminatorSet.add(null);
 
-        do {
+        while(!terminatorSet.contains(this.tokenString) || (isQuoteMode == true)) {
            if(isQuoteMode){
                 if((this.tokenString == QUOTE) && (this.lookAheadString == QUOTE)){
                     returnValue = returnValue + QUOTE;
@@ -151,7 +151,7 @@ public class CSVReader {
 
            }
 
-        } while(!terminatorSet.contains(this.tokenString) || (isQuoteMode == true));
+        }
 
 
         return returnValue;
